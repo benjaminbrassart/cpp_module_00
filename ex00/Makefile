@@ -6,17 +6,13 @@
 #    By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/24 06:57:27 by bbrassar          #+#    #+#              #
-#    Updated: 2022/03/24 07:25:09 by bbrassar         ###   ########.fr        #
+#    Updated: 2022/04/26 11:00:24 by bbrassar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX					= c++
-CXXFLAGS			= -Wall -Wextra -Werror -c -MMD -MP
+CXXFLAGS			= -Wall -Wextra -Werror -c -MMD -MP -std=c++98
 RM					= rm -f
-
-ifeq ($(DEBUG), true)
-CXXFLAGS			+= -g3 -std=c++98
-endif
 
 NAME				= megaphone
 SRC					= megaphone.cpp

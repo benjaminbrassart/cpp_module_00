@@ -6,17 +6,13 @@
 #    By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/24 11:04:29 by bbrassar          #+#    #+#              #
-#    Updated: 2022/03/24 11:31:23 by bbrassar         ###   ########.fr        #
+#    Updated: 2022/04/26 11:03:23 by bbrassar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX					= c++
-CXXFLAGS			= -Wall -Wextra -Werror -c -MMD -MP -I.
+CXXFLAGS			= -Wall -Wextra -Werror -c -MMD -MP -I. -std=c++98
 RM					= rm -f
-
-ifeq ($(DEBUG), true)
-CXXFLAGS			+= -g3 -std=c++98
-endif
 
 NAME				= tests
 SRC					= Account.cpp tests.cpp
