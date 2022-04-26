@@ -6,7 +6,7 @@
 /*   By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:03:03 by bbrassar          #+#    #+#             */
-/*   Updated: 2022/03/24 07:23:25 by bbrassar         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:29:17 by bbrassar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,14 @@
 #include <string>
 #include <iostream>
 
-static std::string	&_strtoupper(std::string &str)
+static void	_yell(std::string const str)
 {
-	for (std::string::iterator it = str.begin(); it != str.end(); ++it)
-		*it = ::toupper(*it);
-	return (str);
+	for (std::string::const_iterator it = str.begin(); it != str.end(); ++it)
+		std::cout << (char)::toupper(*it);
 }
 
 int	main(int argc, char *argv[])
 {
-	std::string	str;
-
 	if (argc == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
@@ -36,8 +33,7 @@ int	main(int argc, char *argv[])
 		{
 			if (i != 1)
 				std::cout << " ";
-			str = argv[i];
-			std::cout << _strtoupper(str);
+			_yell(std::string(argv[i]));
 		}
 	}
 	std::cout << std::endl;
