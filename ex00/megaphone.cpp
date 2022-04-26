@@ -17,25 +17,29 @@
 #include <string>
 #include <iostream>
 
-static void	_yell(std::string str)
+static std::string	&_strtoupper(std::string &str)
 {
-	std::size_t const	len = str.size();
-
-	for (std::size_t n = 0; n < len; ++n)
-		str[n] = ::toupper(str[n]);
-	std::cout << str;
+	for (std::string::iterator it = str.begin(); it != str.end(); ++it)
+		*it = ::toupper(*it);
+	return (str);
 }
 
 int	main(int argc, char *argv[])
 {
+	std::string	str;
+
 	if (argc == 1)
-		_yell("* LOUD AND UNBEARABLE FEEDBACK NOISE *");
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
+	{
 		for (int i = 1; i < argc; ++i)
-			if (i == argc - 1)
-				_yell(argv[i]);
-			else
-				_yell(std::string(argv[i]) + " ");
+		{
+			if (i != 1)
+				std::cout << " ";
+			str = argv[i];
+			std::cout << _strtoupper(str);
+		}
+	}
 	std::cout << std::endl;
 	return (0);
 }
