@@ -6,7 +6,7 @@
 /*   By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 08:18:34 by bbrassar          #+#    #+#             */
-/*   Updated: 2022/03/24 09:49:47 by bbrassar         ###   ########.fr       */
+/*   Updated: 2022/04/26 11:30:24 by bbrassar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,6 @@ bool	Contact::fillField(int index)
 			field_ptr = &this->darkestSecret;
 			break ;
 		default:
-			std::cout
-				<< "ERROR: UNKNOWN INDEX: "
-				<< index
-				<< std::endl;
 			return (false);
 	}
 	std::cout.width(15);
@@ -92,10 +88,6 @@ void Contact::printField(int index)
 			field_ptr = &this->darkestSecret;
 			break ;
 		default:
-			std::cout
-				<< "ERROR: UNKNOWN INDEX: "
-				<< index
-				<< std::endl;
 			return ;
 	}
 	std::cout
