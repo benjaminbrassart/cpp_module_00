@@ -6,7 +6,7 @@
 #    By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/24 07:24:01 by bbrassar          #+#    #+#              #
-#    Updated: 2022/04/26 11:01:33 by bbrassar         ###   ########.fr        #
+#    Updated: 2022/04/26 13:49:03 by bbrassar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CXX					= c++
 CXXFLAGS			= -Wall -Wextra -Werror -c -MMD -MP -Iinclude -std=c++98
 RM					= rm -f
 
-NAME				= CRAPBOOK.EXE
+NAME				= phonebook
 DIR_SRC				= src
 DIR_OBJ				= obj
 SRC					= main.cpp \
